@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="320" prefWidth="400" style="-fx-background-color: #f8f8f8;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="controller.add_room_controller">
+
+    <VBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Add Room" />
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" minWidth="100" />
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+            </columnConstraints>
+
+            <Label text="Room ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="txtRoomID" promptText="roomId" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbType" promptText="Select type" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Single" />
+                        <String fx:value="Double" />
+                        <String fx:value="Suite" />
+                        <String fx:value="Deluxe" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+
+            <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextArea fx:id="txtDescription" prefRowCount="3" promptText="description" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="txtPrice" promptText="price" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <Button fx:id="btnSave" onAction="#saveRoomAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Save" />
+            <Button fx:id="btnCancel" style="-fx-background-color: #E0E0E0;" text="Cancel" />
+        </HBox>
+    </VBox>
+</AnchorPane>
