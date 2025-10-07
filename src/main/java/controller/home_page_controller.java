@@ -45,4 +45,18 @@ public class home_page_controller {
         }
 
     }
+
+    public void customerAction(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/view/customer_info.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Customer Information");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.home_page_controller">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.home_page_controller">
 
     <top>
         <ToolBar>
@@ -21,7 +21,7 @@
     <center>
         <VBox alignment="CENTER" spacing="15.0">
             <Label fx:id="lblWelcome" prefHeight="30.0" prefWidth="80.0" style="-fx-font-size: 18px;" text="Welcome!" />
-            <Button fx:id="btnCustomerInfo" prefWidth="120" style="-fx-background-color: #40ad40;" text="Customer Info..." />
+            <Button fx:id="btnCustomerInfo" onAction="#customerAction" prefWidth="120" style="-fx-background-color: #40ad40;" text="Customer Info..." />
             <Button fx:id="btnRoomInfo" onAction="#roomAction" prefWidth="120" style="-fx-background-color: #bd131e;" text="Room Info" textFill="WHITE" />
         </VBox>
     </center>
