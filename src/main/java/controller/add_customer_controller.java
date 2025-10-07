@@ -8,7 +8,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.dto.customer_info_DTO;
-import model.dto.room_info_DTO;
 
 public class add_customer_controller {
 

@@ -80,8 +80,8 @@ public class customer_info_controller implements Initializable {
 
     @FXML
     void deleteCustomerAction(ActionEvent event) {
-        customer_info_DTO selectRoomInfoDto = customerTabel.getSelectionModel().getSelectedItem();
-        customerInfoDtos.remove(selectRoomInfoDto);
+        customer_info_DTO selectCustomerInfoDto = customerTabel.getSelectionModel().getSelectedItem();
+        customerInfoDtos.remove(selectCustomerInfoDto);
         customerTabel.setItems(customerInfoDtos);
         customerTabel.refresh();
     }

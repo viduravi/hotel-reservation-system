@@ -23,6 +23,7 @@
             <Label fx:id="lblWelcome" prefHeight="30.0" prefWidth="80.0" style="-fx-font-size: 18px;" text="Welcome!" />
             <Button fx:id="btnCustomerInfo" onAction="#customerAction" prefWidth="120" style="-fx-background-color: #40ad40;" text="Customer Info..." />
             <Button fx:id="btnRoomInfo" onAction="#roomAction" prefWidth="120" style="-fx-background-color: #bd131e;" text="Room Info" textFill="WHITE" />
+         <Button fx:id="btnStaffInfo" layoutX="250.0" layoutY="223.0" onAction="#staffAction" prefWidth="120" style="-fx-background-color: #f2fa07;" text="Staff Info" />
         </VBox>
     </center>
 </BorderPane>

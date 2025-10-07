@@ -23,7 +23,7 @@
                 <!-- Title -->
                 <Label prefHeight="30.0" prefWidth="238.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Customer Information" />
                 <Label prefHeight="18.0" prefWidth="226.0" />
-                <Button fx:id="btnHome" mnemonicParsing="false" onAction="#backToHomeAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #4de411;" text="🏠Home" />
+                <Button fx:id="btnHome" mnemonicParsing="false" onAction="#backToHomeAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold;" text="🏠Home" />
             </children>
         </HBox>
 
@@ -40,9 +40,9 @@
 
         <!-- Buttons -->
         <HBox spacing="15">
-            <Button fx:id="btnAdd" onAction="#addCustomerAction" text="Add Customer" />
-            <Button fx:id="btnEdit" text="Edit Customer" />
-            <Button fx:id="btnDelete" onAction="#deleteCustomerAction" text="Delete Customer" />
+            <Button fx:id="btnAdd" onAction="#addCustomerAction" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: #3498db;" text="Add Customer" />
+            <Button fx:id="btnEdit" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: #f1c40f;" text="Edit Customer" />
+            <Button fx:id="btnDelete" onAction="#deleteCustomerAction" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: #e74c3c;" text="Delete Customer" />
         </HBox>
 
     </VBox>

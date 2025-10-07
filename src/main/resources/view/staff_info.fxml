@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.staff_info_controller"
+            prefWidth="850" prefHeight="520"
+            style="-fx-background-color: #f9f9f9; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+    <children>
+        <VBox spacing="20" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+
+            <!-- Header -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label text="Staff Information"
+                       style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="btnHome" text="🏠Home" onAction="#backToHomeAction"
+                        style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"
+                        prefHeight="30" prefWidth="90"/>
+            </HBox>
+
+            <!-- Table -->
+            <TableView fx:id="staffTable" prefHeight="360">
+                <columns>
+                    <TableColumn fx:id="colId" text="Staff ID" prefWidth="100"/>
+                    <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+                    <TableColumn fx:id="colRole" text="Role" prefWidth="130"/>
+                    <TableColumn fx:id="colEmail" text="Email" prefWidth="180"/>
+                    <TableColumn fx:id="colPhone" text="Phone" prefWidth="130"/>
+                    <TableColumn fx:id="colSalary" text="Salary" prefWidth="120"/>
+                </columns>
+                <placeholder>
+                    <Label text="No staff records found"/>
+                </placeholder>
+            </TableView>
+
+            <!-- Buttons -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Button fx:id="btnAdd" text="Add Staff" onAction="#addStaffAction"
+                        prefWidth="100" prefHeight="35"
+                        style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"/>
+                <Button fx:id="btnEdit" text="Edit Staff" onAction="#editStaffAction"
+                        prefWidth="100" prefHeight="35"
+                        style="-fx-background-color: #f1c40f; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"/>
+                <Button fx:id="btnDelete" text="Delete Staff" onAction="#deleteStaffAction"
+                        prefWidth="110" prefHeight="35"
+                        style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"/>
+            </HBox>
+
+        </VBox>
+    </children>
+</AnchorPane>

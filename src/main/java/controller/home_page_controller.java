@@ -59,4 +59,18 @@ public class home_page_controller {
             e.printStackTrace();
         }
     }
+
+    public void staffAction(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/view/staff_info.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Staff Information");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

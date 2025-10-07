@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.add_staff_controller"
+            prefWidth="500" prefHeight="460"
+            style="-fx-background-color: #f8f8f8; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-background-radius: 10;">
+    <children>
+        <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+
+            <!-- Header -->
+            <Label text="Add Staff Member"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+
+            <!-- Input Fields -->
+            <GridPane hgap="15" vgap="15" alignment="CENTER_LEFT">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" prefWidth="120"/>
+                    <ColumnConstraints prefWidth="250"/>
+                </columnConstraints>
+
+                <!-- Staff ID -->
+                <Label text="Staff ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtId" promptText="Enter Staff ID"
+                           prefHeight="35" prefWidth="250" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <!-- Name -->
+                <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtName" promptText="Enter Name"
+                           prefHeight="35" prefWidth="250" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <!-- Role -->
+                <Label text="Role:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtRole" promptText="Enter Role"
+                           prefHeight="35" prefWidth="250" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <!-- Email -->
+                <Label text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtEmail" promptText="Enter Email"
+                           prefHeight="35" prefWidth="250" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <!-- Phone -->
+                <Label text="Phone:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtPhone" promptText="Enter Phone Number"
+                           prefHeight="35" prefWidth="250" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <!-- Salary -->
+                <Label text="Salary:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtSalary" promptText="Enter Salary"
+                           prefHeight="35" prefWidth="250" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <!-- Buttons -->
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="btnSave" text="Save" onAction="#saveStaffAction"
+                        prefWidth="100" prefHeight="35"
+                        style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"/>
+                <Button fx:id="btnCancel" text="Cancel" onAction="#cancelAction"
+                        prefWidth="100" prefHeight="35"
+                        style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"/>
+            </HBox>
+
+        </VBox>
+    </children>
+</AnchorPane>

@@ -23,25 +23,25 @@
               <!-- Title -->
               <Label prefHeight="30.0" prefWidth="238.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Hotel Room Information" />
             <Label prefHeight="18.0" prefWidth="226.0" />
-            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#bacToHomeAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #4de411;" text="🏠Home" />
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#bacToHomeAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold;" text="🏠Home" />
          </children>
       </HBox>
 
         <!-- TableView -->
-        <TableView fx:id="roomTable" prefHeight="300" prefWidth="580">
+        <TableView fx:id="roomTable" prefHeight="300" prefWidth="580" style="-fx-font-weight: bold; -fx-text-fill: white;">
             <columns>
                 <TableColumn fx:id="colRoomNumber" prefWidth="100" text="Room ID" />
                 <TableColumn fx:id="colType" prefWidth="150" text="Type" />
-                <TableColumn fx:id="colPrice" prefWidth="120" text="Description" />
-                <TableColumn fx:id="colAvailability" prefWidth="120" text="Price" />
+                <TableColumn fx:id="colPrice" prefWidth="182.3999481201172" text="Description" />
+                <TableColumn fx:id="colAvailability" prefWidth="115.20001220703125" text="Price" />
             </columns>
         </TableView>
 
         <!-- Buttons -->
         <HBox spacing="15">
-            <Button fx:id="btnAdd" onAction="#addRoomAction" text="Add Room" />
-            <Button fx:id="btnEdit" text="Edit Room" />
-            <Button fx:id="btnDelete" onAction="#roomDeleteAction" text="Delete Room" />
+            <Button fx:id="btnAdd" onAction="#addRoomAction" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Add Room" />
+            <Button fx:id="btnEdit" style="-fx-font-weight: bold; -fx-background-color: #f1c40f; -fx-text-fill: white;" text="Edit Room" />
+            <Button fx:id="btnDelete" onAction="#roomDeleteAction" style="-fx-font-weight: bold; -fx-background-color: #e74c3c; -fx-text-fill: white;" text="Delete Room" />
         </HBox>
 
     </VBox>
